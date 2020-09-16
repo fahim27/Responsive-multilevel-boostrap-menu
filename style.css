@@ -18,15 +18,18 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    position: absolute;
+    position: absolute; 
+    background-color: #081621;
+
 }
 
 nav{
     width: 100%;
-    height: 8rem;
-    border-bottom: 1px solid #000000;
+    height: 45px;
+    border-bottom: 1px solid red;
     align-items: center;
     display:flex;
+    background: #081621;
 }
 .container {
     width: 100%;
@@ -39,7 +42,7 @@ nav{
     color: #eb3007;
     font-size: 4rem;
     position: absolute;
-    top: 0;
+    top: -40px;
     z-index: 1500;
     right: 2rem;
     transform: translateY(50%);
@@ -67,10 +70,14 @@ nav{
 .nav-list li {
     line-height: 8rem;
     position: relative;
+    color: #fff;
 }
 
 .sub-menu li {
-    line-height: 4rem;
+    line-height: 2rem;
+    font-size: 11px;
+    border-bottom: 1px solid #000;
+
 }
 ul.sub-menu a {
     color: #fff;
@@ -78,7 +85,7 @@ ul.sub-menu a {
 
 .nav-list a {
     display: block;
-    color: #000000;
+    color: #fff;
     padding: 0 1.5rem;
     text-transform: uppercase;
     transition: color 650ms;
@@ -105,11 +112,11 @@ ul.sub-menu a {
     color: #000000;
 } */
 .sub-menu{
-    width: 20rem;
+    width: 14rem;
     position: absolute;
     display: block;
-    border-top: 3px solid #eb3007;
-    background-color: #191919;
+    border-top: 2px solid #eb3007;
+    background-color: #081621;
     top:16rem;
     z-index: 100;
     opacity: 0;
@@ -118,26 +125,27 @@ ul.sub-menu a {
 .sub-menu::before{
     content: "";
     position: absolute;
-    top: -2.5rem;
-    left: 3rem;
-    border: 1.2rem solid transparent;
+    top: -1rem;
+    left: 1rem;
+    border: 7px solid transparent;
     border-bottom-color:#eb3007 ;
 }
 .sub-menu .sub-menu::before{
-    top: 9rem;
-    left: -2.5rem;
-    border: 1.2rem solid transparent;
+    top: 0rem;
+    left: -1rem;
+    border: .5rem solid transparent;
     border-right-color:#eb3007 ;
 }
 .sub-menu .sub-menu{
     border-top: none;
-    border-left: 3px solid #eb3007;
+    border-left: 2px solid #eb3007;
     top: 0;
     left: 150%;
 }
 .nav-list li:hover > .sub-menu{
-    top: 6rem;
+    top: 5.6rem;
     opacity: 1;
+    left: 1.5rem;
     visibility: visible;
 }
 
@@ -158,7 +166,7 @@ ul.sub-menu a {
         display:none;
         height: 100vh;
         z-index: 1;
-        background-color: #191919;
+        background-color: #081621; 
     }
     .nav-list li{
         line-height: 4rem;
@@ -172,9 +180,15 @@ ul.sub-menu a {
     .sub-menu{
         position: initial;
         border:3px solid transparent;
-        border-left-color: #eb3007;
+        border-left-color: #081621;
         margin-left: 15px;
         max-height: 0;
+    }
+    .sub-menu li {
+        line-height: 2rem;
+        font-size: 11px;
+        border-bottom: none;
+    
     }
     .sub-menu::before{
         display: none;
